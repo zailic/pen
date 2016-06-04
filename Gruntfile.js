@@ -1,5 +1,5 @@
 /* global module: false */
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   "use strict";
 
   // Project configuration.
@@ -20,6 +20,29 @@ module.exports = function(grunt) {
       }
     },
 
+    copy: {
+      css: {
+        files: [
+          {
+            cwd: "src",
+            src: ["font/**/*", "pen.css"],
+            dest: "build/css/",
+            expand: true
+          }
+        ]
+      },
+      dist: {
+        files: [
+          {
+            cwd: "build",
+            src: ["css/**/*", "*.min.js"],
+            dest: "dist/",
+            expand: true
+          }
+        ]
+      }
+    },
+
     watch: {
       files: ['<%= jshint.files %>'],
       tasks: ['jshint']
@@ -30,8 +53,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Default task(s).
-  grunt.registerTask('default', ['jshint', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'uglify', 'copy:css']);
+  grunt.registerTask('release', ['copy:dist']);
 
 };
