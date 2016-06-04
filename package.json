@@ -1,8 +1,6 @@
 {
   "name": "pen",
   "version": "0.2.4-alpha1",
-  "main": "index",
-  "format": "cjs",
   "author": "sofish <sofish@icloud.com>",
   "description": "enjoy live editing (+markdown) http://sofish.github.io/pen",
   "repository": {
@@ -19,6 +17,8 @@
     "url": "https://github.com/sofish/pen/blob/master/license.txt"
   },
   "jspm": {
+    "main": "index",
+    "format": "cjs",
     "files": [
       "src/pen.js",
       "src/markdown.js",
