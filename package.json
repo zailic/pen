@@ -1,6 +1,6 @@
 {
   "name": "pen",
-  "version": "0.2.4-alpha10",
+  "version": "0.2.4-alpha11",
   "author": "sofish <sofish@icloud.com>",
   "main": "pen",
   "format": "global",
@@ -25,8 +25,8 @@
     "shim": {
       "pen": {
         "deps": [
-          "markdown",
-          "pen.css!"
+          "./markdown",
+          "./pen.css!"
         ]
       }
     }
