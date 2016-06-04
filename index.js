@@ -1,4 +1,5 @@
 // include dependencies
-require('lib/markdown');
+require('./src/pen');
+require('./src/markdown');
 // Export namespace
 module.exports = 'Pen';
