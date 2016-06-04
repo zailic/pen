@@ -1,6 +1,6 @@
 {
   "name": "pen",
-  "version": "0.2.4-alpha1",
+  "version": "0.2.4-alpha3",
   "author": "sofish <sofish@icloud.com>",
   "main": "src/pen.js",
   "format": "global",
