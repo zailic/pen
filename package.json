@@ -18,13 +18,15 @@
     "type": "MIT",
     "url": "https://github.com/sofish/pen/blob/master/license.txt"
   },
-  "shim": {
-    "src/pen.js": {
-      "deps": [
-        "src/markdown.js",
-        "src/pen.css!"
-      ]
-    }  
+  "jspm": {
+    "shim": {
+      "src/pen.js": {
+        "deps": [
+          "src/markdown.js",
+          "src/pen.css!"
+        ]
+      }
+    }
   },
   "devDependencies": {
     "grunt": "^0.4.5",
