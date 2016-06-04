@@ -1,8 +1,8 @@
 {
   "name": "pen",
-  "version": "0.2.4-alpha8",
+  "version": "0.2.4-alpha10",
   "author": "sofish <sofish@icloud.com>",
-  "main": "src/pen",
+  "main": "pen",
   "format": "global",
   "description": "enjoy live editing (+markdown) http://sofish.github.io/pen",
   "repository": {
@@ -19,11 +19,14 @@
     "url": "https://github.com/sofish/pen/blob/master/license.txt"
   },
   "jspm": {
+    "directories": {
+      "lib": "src"
+    },
     "shim": {
       "pen": {
         "deps": [
-          "./src/markdown.js",
-          "./src/pen.css!"
+          "markdown",
+          "pen.css!"
         ]
       }
     }
